@@ -1,0 +1,16 @@
+﻿  Main.cpp
+c:\users\adam\source\repos\templateimage\templateimage\header.h(39): warning C4018: '>': signed/unsigned mismatch
+  c:\users\adam\source\repos\templateimage\templateimage\header.h(32): note: while compiling class template member function 'Image<char>::Image(int,int,T *)'
+          with
+          [
+              T=char
+          ]
+  c:\users\adam\source\repos\templateimage\templateimage\main.cpp(42): note: see reference to function template instantiation 'Image<char>::Image(int,int,T *)' being compiled
+          with
+          [
+              T=char
+          ]
+  c:\users\adam\source\repos\templateimage\templateimage\header.h(98): note: see reference to class template instantiation 'Image<char>' being compiled
+c:\users\adam\source\repos\templateimage\templateimage\header.h(115): warning C4018: '>': signed/unsigned mismatch
+  c:\users\adam\source\repos\templateimage\templateimage\main.cpp(48): note: see reference to function template instantiation 'Image<char> operator +<char>(Image<char> &,Image<char> &)' being compiled
+  TemplateImage.vcxproj -> C:\Users\Adam\source\repos\TemplateImage\Debug\TemplateImage.exe
