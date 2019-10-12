@@ -1,0 +1,7 @@
+﻿  Templates2.0.cpp
+c:\users\adam\source\repos\templates2.0\templates2.0\templates2.0.cpp(40): warning C4305: 'argument': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  Templates2.0.vcxproj -> C:\Users\Adam\source\repos\Templates2.0\Debug\Templates2.0.exe
