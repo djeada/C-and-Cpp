@@ -1,78 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node{
-	int number;
-	struct node *next;
-}
-node;
+typedef struct wezel {
+	int dane;
+	struct wezel* nastepny;
+}wezel;
 
-void add_number(node** numbers);
-void add_to_list(int number, node** numbers, node* n);
-void print_list(node* numbers);
-void free_memory(node **numbers);
+/*
+	1. Dodawanie danych.
+	2. Wyświetlanie listy.
+*/
+
+void dodaj_dane(wezel** lista);
+void dodaj_wezel_do_listy(wezel** lista, wezel* nowe_pudelko);
+void wyswietl_liste(wezel* lista);
+void uwolnij_pamiec(wezel** lista);
 
 int main(){
-	
-	// Memory for numbers
-	node *numbers = NULL;
 
-	add_number(&numbers);
-	add_number(&numbers);
-	add_number(&numbers);
-
-	// Print numbers
-	print_list(numbers);
-
-	// Free memory
-	free_memory(&numbers);
+	wezel* moja_lista = NULL;
+	for(int i = 0; i < 3; i++)
+		dodaj_dane(&moja_lista);
+	wyswietl_liste(moja_lista);
+	uwolnij_pamiec(&moja_lista);
 
 	return 0;
 }
 
-void add_number(node** numbers) {
-	// Prompt for number
-	int number;
-	printf("number: \n");
-	scanf("%d",&number);
-
-	// Allocate space for number
-	node* n = (node*)malloc(sizeof(node));
-	if (!n) {
-		return;
-	}
-	add_to_list(number, numbers, n);
+void dodaj_dane(wezel** lista){
+	printf("Podaj dane: \n");
+	int dana;
+	scanf("%d",&dana);
+	wezel* nowe_pudelko = (wezel*)malloc(sizeof(wezel));
+	nowe_pudelko->dane = dana;
+	nowe_pudelko->nastepny = NULL;
+	dodaj_wezel_do_listy(lista, nowe_pudelko);
 }
 
-void add_to_list(int number, node** numbers, node* n) {
-	n->number = number;
-	n->next = NULL;
-	if (*numbers) {
-		for (node *ptr = *numbers; ptr != NULL; ptr = ptr->next) {
-			if (!ptr->next) {
-				ptr->next = n;
+void dodaj_wezel_do_listy(wezel** lista, wezel* nowe_pudelko){
+	//jesli lista jest pusta
+
+	if(*lista == NULL){
+		*lista = nowe_pudelko;
+	}
+	//jesli juz cos w liscie jest
+	else{
+		//przesuwamy sie za pomoca strzalek po calej liscie az dojdziemy do konca
+		for(wezel* licznik = *lista; licznik != NULL; licznik = licznik->nastepny){
+			//jesli dotarlismy do konca, to pole nastepny laczymy strzalka z naszym pudelkiem
+			if(licznik->nastepny == NULL){
+				licznik->nastepny = nowe_pudelko;
 				break;
 			}
 		}
 	}
-	else {
-		*numbers = n;
+}
+
+void wyswietl_liste(wezel* lista){
+	printf("Twoja lista: \n");
+	//przejdz przez cala liste i wyswietl dane z kazdego pudelka
+	for(wezel* licznik = lista; licznik != NULL; licznik = licznik->nastepny){
+		printf("%d \n", licznik->dane);
 	}
 }
 
-void print_list(node* numbers) {
-	printf("\n");
-	for (node *ptr = numbers; ptr != NULL; ptr = ptr->next){
-		printf("%d \n", ptr->number);
-	}
-}
-
-void free_memory(node **numbers) {
-	node *ptr = *numbers;
-	while (ptr != NULL) {
-		node *next = ptr->next;
-		free(ptr);
-		ptr = next;
+//pamiec zarezerwowana ze sterty musi zostac uwolniona
+void uwolnij_pamiec(wezel** lista){
+	for(wezel* licznik = *lista; licznik != NULL; licznik = licznik->nastepny){
+		free(licznik);
 	}
 }
 
