@@ -115,7 +115,17 @@ Source code from my yt channel videos
 </table>
 <p>&nbsp;&nbsp;</p>
 <h2>Stałe</h2>
-<p>&nbsp;</p>
+<div class="highlight highlight-source-c++">
+  
+const double pi = 3.14; 
+  
+// Tak nie robimy!
+const double doInicjalizacji.
+  
+// Tak nie robimy!
+bool prawda true;
+const bool zawsze_prawda = prawda;
+</div>
 <h2>Zakres życia zmiennych</h2>
 <p>&nbsp;</p>
 <h1>Interakcja z konsolą</h1>
