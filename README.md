@@ -30,24 +30,24 @@ Source code from my yt channel videos
 </tr>
 <tr>
 <td rowspan="4">Pojedyncze znaki</td>
-<td><code><strong>char</strong></code></td>
+<td><code><strong>char</td>
 <td>Jeden bajt. Najczęściej 8 bitów.</td>
 </tr>
 <tr>
-<td><code><strong>char16_t</strong></code></td>
+<td><code><strong>char16_t</td>
 <td>Nie mniejszy niż <code>char</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><strong>char32_t</strong></code></td>
+<td><code><strong>char32_t</td>
 <td>Nie mniejszy niż  <code>char16_t</code>.Co najmniej 32 bity.</td>
 </tr>
 <tr>
-<td><code><strong>wchar_t</strong></code></td>
+<td><code><strong>wchar_t</td>
 <td>Najwięcej znaków pod jedną nazwą.</td>
 </tr>
 <tr>
 <td rowspan="5">Liczby całkowite</td>
-<td><code><strong>signed char</strong></code></td>
+<td><code><strong>signed char</td>
 <td>Taki sam rozmiar jak <code>char</code>. Co najmniej 8 bitów.</td>
 </tr>
 <tr>
@@ -55,7 +55,7 @@ Source code from my yt channel videos
 <td>Nie mniejszy niż <code>char</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> <strong>int</strong></code></td>
+<td><code><em>signed</em> <strong>int</td>
 <td>Nie mniejszy niż  <code>short</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
@@ -68,7 +68,7 @@ Source code from my yt channel videos
 </tr>
 <tr>
 <td rowspan="5">Liczby naturalne</td>
-<td><code><strong>unsigned char</strong></code></td>
+<td><code><strong>unsigned char</td>
 <td rowspan="5">Tak jak całkowite.</td>
 </tr>
 <tr>
@@ -85,30 +85,30 @@ Source code from my yt channel videos
 </tr>
 <tr>
 <td rowspan="3">Liczby zmiennoprzecinkowe</td>
-<td><code><strong>float</strong></code></td>
+<td><code><strong>float</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><code><strong>double</strong></code></td>
+<td><code><strong>double</td>
 <td>Precyzja nie mniejsza niż dla<code>float</code>.</td>
 </tr>
 <tr>
-<td><code><strong>long double</strong></code></td>
+<td><code><strong>long double</td>
 <td>Precyzja nie mniejsza niż dla <code>double</code>.</td>
 </tr>
 <tr>
 <td>Typ logczny</td>
-<td><code><strong>bool</strong></code></td>
+<td><code><strong>bool</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
 <td>Typ void</td>
-<td><code><strong>void</strong></code></td>
+<td><code><strong>void</td>
 <td>no storage</td>
 </tr>
 <tr>
 <td>Wskaźnik na nic</td>
-<td><code><strong>decltype(nullptr)</strong></code></td>
+<td><code><strong>decltype(nullptr)</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
