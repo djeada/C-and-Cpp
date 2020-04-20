@@ -272,8 +272,8 @@ int main(){
 
 <h1>Funkcje</h1>
 
-<h2>tworzenie i wywoływanie funkcji</h2>
-Za pomocą funkcji możemy część kodu amknąć pod jedną nazwą.
+<h4>Tworzenie i wywoływanie funkcji</h4>
+Za pomocą funkcji możemy część kodu zamknąć pod jedną nazwą.
 
 ```c++
 wybrany_typ nazwa_funkcji(argumenty){	
@@ -284,6 +284,50 @@ wybrany_typ nazwa_funkcji(argumenty){
 
 int main(){ 	
 	wybrany_typ x = nazwa_funkcji(argumenty); 	
+}	
+```
+
+<h4>Funkcja void</h4>
+Funkcje void nie zwracają żadnej wartości.
+Nie używamy słowa kluczowego <em>return</em>.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+void wypisz_imie(string s){
+	cout << s << endl;
+}
+
+int main() {
+	string imie = "Karol";
+	wypisz_imie(imie);
+	
+	return 0;
+}
+```
+
+<h4>Funkcja zwracająca wartość</h4>
+Konieczne jest użycie słowa kluczowego <em>return</em>.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int suma(int x, int y){
+	return x + y;
+}
+
+int main() {
+	int a = 5;
+	int b = 3;
+	
+	cout << suma(a,b) << endl;
+	
+	return 0;
+}
 }	
 ```
 
