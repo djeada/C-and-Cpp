@@ -275,7 +275,7 @@ int main(){
 <h2>tworzenie i wywoływanie funkcji</h2>
 Za pomocą funkcji możemy część kodu amknąć pod jedną nazwą.
 
-<em>
+<code>
 wybrany_typ nazwa_funkcji(argumenty)
 {
 	//ciało czyli jaki kod chcemy żeby został uruchomiony po wywołaniu nazwa_funkcji
@@ -283,10 +283,9 @@ wybrany_typ nazwa_funkcji(argumenty)
 }
 
 int main(){ 
-
 	wybrany_typ x = nazwa_funkcji(argumenty);
 }
-</em>
+</code>
 
 <h1>Tablice</h1>
 <p>&nbsp;</p>
