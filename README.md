@@ -212,7 +212,62 @@ int orzel_lub_reszka(){
 
 <h1>Wskaźniki</h1>
 
+Wskaźnik przechowuje adres innej zmiennej.
 
+<h4>Deklaracja</h4>
+<p><em>Typ_zmiennej_kt&oacute;rej_adres_przechowuje_wskaźnik * nazwa_wskaźnika;</em></p>
+
+```c++
+int* p1;
+double* p2;
+string* p3;
+```
+<h4>Inicjalizacja</h4>
+```c++
+int x = 4;
+double y = 3.5;
+string s = "napis";
+
+p1 = &x;
+p2 = &y;
+p3 = &s;
+```
+<h4>Dereferencja</h4>
+Wyłuskanie wartości na, która znajduje się w zmiennej, na którą wskazuje nasz wskaźnik.
+Używane nie tylko do odczytu, ale również zmiany wartości tej zmiennej.
+
+<p><em>*nazwa wskaźnika</em></p>
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main(){
+	int x = 4;
+	double y = 3.5;
+	string s = "napis";
+	
+	int* p1 = &x;
+	double* p2 = &y;
+	string* p3 = &s;
+  
+  	cout << "Co siedzi w zmiennych x, y, s: " << endl;
+	cout << p1* << endl;
+	cout << p2* << endl;
+	cout << p3* << endl;
+  
+  	*p1 = 7; //zmiana wartosci zmiennej x
+	*p2 = 8.123; //zmiana wartosci zmiennej y
+  	*p3 = "inny"; //zmiana wartosci zmiennej s
+
+	cout << "Co siedzi w zmiennych x, y, s: " << endl;
+	cout << p1* << endl;
+	cout << p2* << endl;
+	cout << p3* << endl;
+  
+  	return 0;
+}
+```
 
 <h1>Funkcje</h1>
 <p>&nbsp;</p>
@@ -222,7 +277,7 @@ int orzel_lub_reszka(){
 
 <h1>Napisy</h1>
 
-<p>&nbsp;Bibliteka <em>&lt;string;&nbsp;</em>zawiera definicje:</p>
+<p>&nbsp;Bibliteka <em><p>&nbsp;&lt;string&gt;</p></em>zawiera definicje:</p>
 
 <table style="height: 263px; width: 546px;">
 <tbody>
