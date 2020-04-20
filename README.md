@@ -276,15 +276,24 @@ int main(){
 Za pomocą funkcji możemy część kodu amknąć pod jedną nazwą.
 
 <code>
-wybrany_typ nazwa_funkcji(argumenty)
-{
-	//ciało czyli jaki kod chcemy żeby został uruchomiony po wywołaniu nazwa_funkcji
-	return wartosc_jaka_ma_zostac_zwrocona; 
-}
+	</br>
+wybrany_typ nazwa_funkcji(argumenty)	</br>
 
-int main(){ 
-	wybrany_typ x = nazwa_funkcji(argumenty);
-}
+{	</br>
+
+	//ciało czyli jaki kod chcemy żeby został uruchomiony po wywołaniu nazwa_funkcji 	</br>
+
+	return wartosc_jaka_ma_zostac_zwrocona; 	</br>
+
+}	</br>
+
+
+int main(){ 	</br>
+
+	wybrany_typ x = nazwa_funkcji(argumenty); 	</br>
+
+}	</br>
+
 </code>
 
 <h1>Tablice</h1>
