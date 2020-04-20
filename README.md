@@ -137,16 +137,16 @@ const bool zawsze_prawda = prawda;
 int liczba = 5;
 
 if(liczba % 2 == 1){
-	int liczba = 3; 	// zmienna lokalna!
+	int liczba = 3; // zmienna lokalna!
 
 	cout << liczba << endl;	// 3
 }
 
-cout << ;iczba << endl;	// 5
+cout << liczba << endl;	// 5
 ```
 
 ```c++
-int a = 10;	// zmienna globalna
+int a = 10; // zmienna globalna
 
 int main(){
 	int a = 3; // zmienna lokalna
@@ -156,9 +156,39 @@ int main(){
 }
 ```
 
-
 <h1>Interakcja z konsolą</h1>
-<p>&nbsp;</p>
+<p>&nbsp;Bibliteka <em>&lt;iostream&gt;&nbsp;</em>zawiera definicje:</p>
+<ul>
+<li>obiekt&nbsp;<em><strong>cout</strong>&nbsp;</em>oraz operator <strong>&lt;&lt;&nbsp;</strong>wypisuje tekst na konsole;</li>
+<li>obiekt&nbsp;<em><strong>cin</strong>&nbsp;</em>oraz operator&nbsp;<strong>&gt;&gt; </strong>wczytują&nbsp;pojedynczą wartość;</li>
+<li><em>getline(cin, string);&nbsp;</em>wczytuje cały wiersz wraz ze sacjami;</li>
+</ul>
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int liczba;
+    cout << "Podaj pojedynczą liczbę: "<< endl;
+    cin >> liczba;        
+    
+    cout << "Podałeś liczbę: " << liczba << endl; 
+    
+    cin.ignore();  //wyczyszczenie bufora
+    
+    string zadanie;
+    cout << "Podaj pełne zdanie: "<< endl;
+
+    getline(cin, zdanie);
+    
+    cout << "Podałeś zdanie: " << endl << zdanie << endl; 
+    
+    return 0;
+}
+
+```
 <h1>Liczby losowe</h1>
 <p>&nbsp;</p>
 <h1>Wskaźniki</h1>
