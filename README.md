@@ -120,6 +120,7 @@ x++;
 <p>&nbsp;&nbsp;</p>
 <h2>Stałe</h2>
 Zmiana przechowywanej wartości jest zablokowana.
+
 ```c++
 const double pi = 3.14; 
   
