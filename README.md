@@ -39,7 +39,7 @@ Source code from my yt channel videos
 </tr>
 <tr>
 <td><code><strong>char32_t</strong></code></td>
-<td>Nie mniejszy niż  <code>char16_t</code>.Co najmniej 32 bity..</td>
+<td>Nie mniejszy niż  <code>char16_t</code>.Co najmniej 32 bity.</td>
 </tr>
 <tr>
 <td><code><strong>wchar_t</strong></code></td>
@@ -69,7 +69,7 @@ Source code from my yt channel videos
 <tr>
 <td rowspan="5">Liczby naturalne</td>
 <td><code><strong>unsigned char</strong></code></td>
-<td rowspan="5">(same size as their signed counterparts)</td>
+<td rowspan="5">Tak jak całkowite.</td>
 </tr>
 <tr>
 <td><code><strong>unsigned short</strong> <em>int</em></code></td>
@@ -90,11 +90,11 @@ Source code from my yt channel videos
 </tr>
 <tr>
 <td><code><strong>double</strong></code></td>
-<td>Precyzja nie mniejsza niż dla<code>float</code></td>
+<td>Precyzja nie mniejsza niż dla<code>float</code>.</td>
 </tr>
 <tr>
 <td><code><strong>long double</strong></code></td>
-<td>Precyzja nie mniejsza niż dla <code>double</code></td>
+<td>Precyzja nie mniejsza niż dla <code>double</code>.</td>
 </tr>
 <tr>
 <td>Typ logczny</td>
