@@ -5,21 +5,24 @@ Source code from my yt channel videos
 <h1>Zmienne</h1>
 <h4>Stworzenie zmiennej:</h4>
 <p><em>Typ + nazwa;</em></p>
-<div class="highlight highlight-source-c++">
-<pre><span class="pl-k">int</span> x;</pre>
-<pre><span class="pl-k">double</span> y;</pre>
-</div>
+
+```c++
+int x;
+double y;
+```
 <h4>Inicajlizacja</h4>
-<div class="highlight highlight-source-c++">
-<pre>x = <span class="pl-c1">10</span>;</pre>
-<pre>y = <span class="pl-c1">3.56</span>;</pre>
-</div>
+```c++
+x = 10;
+y = 3.56;
+```
 <h4>Nadpisanie:</h4>
-<div class="highlight highlight-source-c++">
-<pre>x = <span class="pl-c1">10</span>;</pre>
-<pre>x = x + 3;</pre>
-<pre>x++;</pre>
-</div>
+
+```c++
+x = 10;
+x = x + 3;
+x++;
+```
+
 <h2>Typy zmiennych</h2>
 <table class="boxed">
 <tbody>
@@ -115,8 +118,7 @@ Source code from my yt channel videos
 </table>
 <p>&nbsp;&nbsp;</p>
 <h2>Stałe</h2>
-<div class="highlight highlight-source-c++">
-
+Zmiana przechowywanej wartości jest zablokowana.
 ```c++
 const double pi = 3.14; 
   
