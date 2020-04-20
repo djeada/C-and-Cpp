@@ -125,14 +125,38 @@ Zmiana przechowywanej wartości jest zablokowana.
 const double pi = 3.14; 
   
 // Tak nie robimy!
-const double doInicjalizacji.
+const double doInicjalizacji;
   
 // Tak nie robimy!
 bool prawda true;
 const bool zawsze_prawda = prawda;
 ```
 <h2>Zakres życia zmiennych</h2>
-<p>&nbsp;</p>
+
+```c++
+int liczba = 5;
+
+if(liczba % 2 == 1){
+	int liczba = 3; 	// zmienna lokalna!
+
+	cout << liczba << endl;	// 3
+}
+
+cout << ;iczba << endl;	// 5
+```
+
+```c++
+int a = 10;	// zmienna globalna
+
+int main(){
+	int a = 3; // zmienna lokalna
+
+	cout << a << endl;	// 3
+  cout << ::a << endl;	// 10
+}
+```
+
+
 <h1>Interakcja z konsolą</h1>
 <p>&nbsp;</p>
 <h1>Liczby losowe</h1>
