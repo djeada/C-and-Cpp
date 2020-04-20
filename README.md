@@ -51,19 +51,19 @@ Source code from my yt channel videos
 <td>Taki sam rozmiar jak <code>char</code>. Co najmniej 8 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> <strong>short</strong> <em>int</em></code></td>
+<td><code><em>signed</em> short <em>int</em></code></td>
 <td>Nie mniejszy niż <code>char</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> <strong>int</strong></td>
+<td><code><em>signed</em> int </td>
 <td>Nie mniejszy niż  <code>short</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> <strong>long</strong> <em>int</em></code></td>
+<td><code><em>signed</em> long <em>int</em></code></td>
 <td>Nie mniejszy niż  <code>int</code>. Co najmniej 32 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> <strong>long long</strong> <em>int</em></code></td>
+<td><code><em>signed</em> long long<em>int</em></code></td>
 <td>Nie mniejszy niż <code>long</code>. Co najmniej 64 bitów.</td>
 </tr>
 <tr>
@@ -104,7 +104,7 @@ Source code from my yt channel videos
 <tr>
 <td>Typ void</td>
 <td>void</td>
-<td>no storage</td>
+<td>nic nie przechowuje</td>
 </tr>
 <tr>
 <td>Wskaźnik na nic</td>
