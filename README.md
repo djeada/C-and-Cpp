@@ -223,6 +223,7 @@ double* p2;
 string* p3;
 ```
 <h4>Inicjalizacja</h4>
+
 ```c++
 int x = 4;
 double y = 3.5;
