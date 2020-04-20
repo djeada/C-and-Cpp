@@ -51,19 +51,19 @@ Source code from my yt channel videos
 <td>Taki sam rozmiar jak <code>char</code>. Co najmniej 8 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> short <em>int</em></code></td>
+<td>signed short int</code></td>
 <td>Nie mniejszy niż <code>char</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> int </td>
+<td>signed int </td>
 <td>Nie mniejszy niż  <code>short</code>. Co najmniej 16 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> long <em>int</em></code></td>
+<td>signed long int</code></td>
 <td>Nie mniejszy niż  <code>int</code>. Co najmniej 32 bitów.</td>
 </tr>
 <tr>
-<td><code><em>signed</em> long long<em>int</em></code></td>
+<td>signed long long int</code></td>
 <td>Nie mniejszy niż <code>long</code>. Co najmniej 64 bitów.</td>
 </tr>
 <tr>
