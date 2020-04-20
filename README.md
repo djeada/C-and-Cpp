@@ -11,6 +11,7 @@ int x;
 double y;
 ```
 <h4>Inicajlizacja</h4>
+
 ```c++
 x = 10;
 y = 3.56;
