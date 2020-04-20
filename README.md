@@ -187,12 +187,33 @@ int main(){
     
     return 0;
 }
-
 ```
+
 <h1>Liczby losowe</h1>
-<p>&nbsp;</p>
+
+```c++
+#include <random>
+
+int losowa_z_przedzialu(int start, int end){
+    std::random_device rd;  
+    std::mt19937 gen(rd()); 
+    std::uniform_real_distribution<> dist(start,end);
+    return distr(gen);
+}
+
+//Dwie opcje z równym prawdopodobieństwem
+int orzel_lub_reszka(){
+    if(randomInRange(-10001, 10000) >= 1){
+        return 1;
+    }
+    return -1;
+}
+```
+
 <h1>Wskaźniki</h1>
-<p>&nbsp;</p>
+
+
+
 <h1>Funkcje</h1>
 <p>&nbsp;</p>
 <h1>Tablice</h1>
