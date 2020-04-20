@@ -219,3 +219,53 @@ int orzel_lub_reszka(){
 <h1>Tablice</h1>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+<h1>Napisy</h1>
+
+<p>&nbsp;Bibliteka <em>&lt;string;&nbsp;</em>zawiera definicje:</p>
+
+<table style="height: 263px; width: 546px;">
+<tbody>
+<tr>
+<td style="width: 155px; text-align: center;"><strong>Funkcja</strong></td>
+<td style="width: 385px; text-align: center;"><strong>Działanie</strong></td>
+</tr>
+<tr>
+<td style="width: 155px;">a.size()</td>
+<td style="width: 385px;">z ilu znak&oacute;w składa się napis&nbsp;<em>a&nbsp;</em>(długość)</td>
+</tr>
+<tr>
+<td style="width: 155px;">a.clear() </td>
+<td style="width: 385px;">wyczyść napis a</td>
+</tr>
+<tr>
+<td style="width: 155px;">a.empty() </td>
+<td style="width: 385px;">prawda jeśli napis <em>a</em> jest pusty</td>
+</tr>
+<tr>
+<td style="width: 155px;">a.append("czesc")</td>
+<td style="width: 385px;">dostaw "czesc" na koniec napisu&nbsp;<em>a</em></td>
+</tr>
+<tr>
+<td style="width: 155px;">a.insert(0, "hej")</td>
+<td style="width: 385px;">wstaw "hej" na pozycje 0 do napisu&nbsp;<em>a</em></td>
+</tr>
+<tr>
+<td style="width: 155px;">a.pop_back() </td>
+<td style="width: 385px;">ściągnij ostatni znak z napisu&nbsp;<em>a</em></td>
+</tr>
+<tr>
+<td style="width: 155px;">a.c_str() </td>
+<td style="width: 385px;">konwersja&nbsp;<em>a</em> na char *</td>
+</tr>
+<tr>
+<td style="width: 155px;">a.find("lol")</td>
+<td style="width: 385px;">na jakiej pozyji w napisie&nbsp;<em>a </em>znajduje się napis "lol"</td>
+</tr>
+<tr>
+<td style="width: 155px;">a.compare(b)</td>
+<td style="width: 385px;">&nbsp;por&oacute;wnaj napis&nbsp;<em>a</em> z&nbsp;<em>b</em></td>
+</tr>
+</tbody>
+</table>
+
