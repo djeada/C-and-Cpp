@@ -2,96 +2,97 @@
 
 Stos::Stos(){
 	rozmiar = 3;
-	indeks_wierzcholka = -1;
-	tablica = new int [rozmiar];
+	tablica = new int[rozmiar];
+	indeksGorny = -1;
 }
 
-
-Stos::Stos(int r) {
+Stos::Stos(int r){
 	rozmiar = r;
-	indeks_wierzcholka = -1;
-	tablica = new int [rozmiar];
+	tablica = new int[rozmiar];
+	indeksGorny = -1;
 }
 
-Stos::Stos(const Stos& inny_stos){
-	rozmiar = inny_stos.rozmiar;
-	indeks_wierzcholka = inny_stos.indeks_wierzcholka;
-	tablica = new int [inny_stos.rozmiar];
-	for (int i = 0; i <= indeks_wierzcholka; i++)
-		tablica[i] = inny_stos.tablica[i];
+Stos::Stos(const Stos &innyStos){
+	rozmiar = innyStos.rozmiar;
+	tablica = new int[rozmiar];
+	for(int i = 0; i <= innyStos.indeksGorny; i++)
+		tablica[i] = innyStos.tablica[i];
+	indeksGorny = innyStos.indeksGorny;
 }
 
-Stos::~Stos() {
-	delete [] tablica;
+Stos::~Stos(){
+ 	delete [] tablica;
 }
 
-
-bool Stos::czyPusty() {
-	if (indeks_wierzcholka < 0) 
+bool Stos::czyPusty(){
+	if(indeksGorny < 0)
 		return true;
 	return false;
 }
 
-bool Stos::czyPelny() {
-	if (indeks_wierzcholka >= rozmiar - 1) 
+bool Stos::czyPelny(){
+	if(indeksGorny >= rozmiar - 1)
 		return true;
 	return false;
 }
 
-int Stos::zdejmij() {
-	if (czyPusty()) {
-    	cerr <<  "Stos jest pusty!" << endl;
-		exit(EXIT_FAILURE);
+bool Stos::odlozNaStos(int dana){
+	if(czyPelny()){
+		cout << "Stack overflow!" << endl;
+		return false;
 	}
-	indeks_wierzcholka--;
-	return tablica[indeks_wierzcholka + 1];
+	indeksGorny++;
+	tablica[indeksGorny] = dana;
+	return true;
 }
 
-void Stos::odloz(int x) {
-	if (czyPelny()) {
-    	cerr << "Stos jest pelny!" << endl;
+int Stos::sciagnijZeStosu(){
+	if(czyPusty()){
+		cerr << "Stack underflow!" << endl;
 		exit(EXIT_FAILURE);
 	}
-	indeks_wierzcholka++;
-	tablica[indeks_wierzcholka] = x;
+	indeksGorny--;
+	return tablica[indeksGorny+1];
 }
 
-ostream& operator << (ostream& out, Stos &s){
+
+void operator ++ (Stos &nasz_stos){
+	int *tmp = new int[nasz_stos.rozmiar + 1];
+	for(int i=0; i <= nasz_stos.indeksGorny; i++)
+		tmp[i] = nasz_stos.tablica[i];
+	delete [] nasz_stos.tablica;
+	nasz_stos.tablica = tmp;
+	nasz_stos.rozmiar++;
+}
+
+void operator -- (Stos &nasz_stos){
+	int *tmp = new int[nasz_stos.rozmiar - 1];
+	nasz_stos.rozmiar--;
+	
+	if(nasz_stos.rozmiar == nasz_stos.indeksGorny)
+		nasz_stos.indeksGorny--;
+	
+	for(int i=0; i <= nasz_stos.indeksGorny; i++)
+		tmp[i] = nasz_stos.tablica[i];
+		
+	delete [] nasz_stos.tablica;
+	
+	nasz_stos.tablica = tmp;
+}
+
+ostream& operator << (ostream &out, const Stos &nasz_stos){
 	cout << "Twoj piekny stos: " << endl;
-	for (int i = 0; i <= s.indeks_wierzcholka; i++)
-		cout << s.tablica[i] << " ";
+	for(int i=0; i <= nasz_stos.indeksGorny; i++)
+		cout << nasz_stos.tablica[i] << "  ";
 	return out;
 }
 
-Stos operator ++ (Stos &s) {
-	int *tmp = new int[s.rozmiar + 1];
-	
-	for (int i = 0; i <= s.indeks_wierzcholka; i++)
-		tmp[i] = s.tablica[i];
-		
-	delete[] s.tablica;
-	s.tablica = tmp;
-	
-	s.rozmiar++;
-	
-	return s;
-}
 
-Stos operator -- (Stos &s) {
-	int *tmp = new int[s.rozmiar - 1];
-	s.rozmiar--;
-	
-	if(s.rozmiar == s.indeks_wierzcholka){
-		s.indeks_wierzcholka--;
-	}
-		
-	for (int i = 0; i <= s.indeks_wierzcholka; i++)
-		tmp[i] = s.tablica[i];
-		
-	delete[] s.tablica;
-	s.tablica = tmp;
-	
-	return s;
-}
+
+
+
+
+
+
 
 

@@ -9,23 +9,25 @@ class Stos {
 	private:
 		int* tablica;
 		int rozmiar;
-		int indeks_wierzcholka;	
+		int indeksGorny;
 	public:
 		Stos();
 		Stos(int r);
-		Stos(const Stos& inny_stos);
+		Stos(const Stos &innyStos);
 		~Stos();
 		
-		void odloz(int x);
-		int zdejmij();
+		bool odlozNaStos(int dana);
+		int sciagnijZeStosu();
 		bool czyPusty();
 		bool czyPelny();
 		
-		friend Stos operator ++ (Stos &s);
-		friend Stos operator -- (Stos &s);
+		friend void operator ++ (Stos &nasz_stos);
+		friend void operator -- (Stos &nasz_stos);
 		
-		friend ostream& operator << (ostream& out, Stos &s);
+		friend ostream& operator << (ostream &out, const Stos &nasz_stos);
+
 };
+
 
 #endif
 
