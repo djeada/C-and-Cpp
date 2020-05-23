@@ -1,7 +1,6 @@
 #ifndef __Lista_H__
-#define __LIsta_H__
+#define __Lista_H__
 
-#include <iostream>
 #include "Student.h"
 
 using namespace std;
@@ -9,22 +8,23 @@ using namespace std;
 class Wezel {
 	Student nasz_student;
 	Wezel* nastepny;
+	
 	public:
 		Wezel(Student s){
 			nasz_student = s;
 			nastepny = nullptr;
 		}
-		
-		void ustawStudenta(Student s){
+
+		void setStudent(Student s){
 			nasz_student = s;
+		}
+		
+		void setNastepny(Wezel* w){
+			nastepny = w;
 		}
 		
 		Student getStudent(){
 			return nasz_student;
-		}
-		
-		void ustawStrzalke(Wezel* strzalka){
-			nastepny = strzalka;
 		}
 		
 		Wezel* getNastepny(){
@@ -35,11 +35,12 @@ class Wezel {
 class Lista {
 	Wezel* glowa;
 	
-	public:
+	public:	
 		Lista(Student s);
 		~Lista();
 		
 		void wstaw(Student s);
+		void posortuj();
 		
 		friend ostream& operator << (ostream& strumien, const Lista& l);
 
