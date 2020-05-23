@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-static void wypisz_hej(){
-	printf("Hej \n");
+static void funkcja1(){
+	printf("funkcja1 \n");
 }
 
-void wypisz_czesc(){
-	printf("Czesc \n");
+void funkcja2(){
+	printf("funkcja2 \n");
 }
 
