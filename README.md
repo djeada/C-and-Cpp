@@ -157,7 +157,7 @@ int main(){
 ```
 
 <h1>Interakcja z konsolą</h1>
-<p>&nbsp;Bibliteka <em>&lt;iostream&gt;&nbsp;</em>zawiera definicje:</p>
+<p>&nbsp;Biblioteka <em>&lt;iostream&gt;&nbsp;</em>zawiera definicje:</p>
 <ul>
 <li>obiekt&nbsp;<em><strong>cout</strong>&nbsp;</em>oraz operator <strong>&lt;&lt;&nbsp;</strong>wypisuje tekst na konsole;</li>
 <li>obiekt&nbsp;<em><strong>cin</strong>&nbsp;</em>oraz operator&nbsp;<strong>&gt;&gt; </strong>wczytują&nbsp;pojedynczą wartość;</li>
