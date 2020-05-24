@@ -10,7 +10,7 @@ Source code from my yt channel videos
 int x;
 double y;
 ```
-<h4>Inicajlizacja</h4>
+<h4>Inicjalizacja</h4>
 
 ```c++
 x = 10;
