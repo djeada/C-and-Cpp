@@ -1,5 +1,5 @@
 # C-and-Cpp
-Source code from my yt channel videos
+Kod źródłowy do programów z yt.
 
 
 <h1>Zmienne</h1>
