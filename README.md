@@ -1,6 +1,14 @@
 # C-and-Cpp
 Kod źródłowy do programów z yt.
 
+<h1>Proces kompilacji</h1>
+1. Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
+ - Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. 
+ - Generacja kodu makr.
+ - Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości.
+2. Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę.
+3. Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę.
+4. Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program.
 
 <h1>Zmienne</h1>
 <h4>Stworzenie zmiennej:</h4>
@@ -275,6 +283,12 @@ int main(){
 <h4>Tworzenie i wywoływanie funkcji</h4>
 Za pomocą funkcji możemy część kodu zamknąć pod jedną nazwą.
 
+Elementy składowe funkcji to:
+1. <em>Typ</em> zwracanej wartości.
+2. <em>Imię</em> funkcji, dzięki któremu jest rozpoznawalna.
+3. <em>Argumenty</em>, czyli zewnętrzne wartości, które chcemy użyć w funkcji i chcemy żeby zostały nam podane w momencie wywołania funkcji.
+
+
 ```c++
 wybrany_typ nazwa_funkcji(argumenty){	
 	//ciało czyli jaki kod chcemy żeby został uruchomiony po wywołaniu nazwa_funkcji 	
@@ -324,11 +338,64 @@ int main() {
 	int a = 5;
 	int b = 3;
 	
-	cout << suma(a,b) << endl;
+	cout << suma(a, b) << endl;
 	
 	return 0;
-}
 }	
+```
+
+<h4>Parametry z domyślną wartością</h4>
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int pomnoz(int a, int b = 3){
+	return a*b;
+}
+
+int main() {
+	int x = 2;
+	int y = 7;
+	
+	cout << pomnoz(x, y) << endl;
+	cout << pomnoz(x) << endl;
+
+	return 0;
+}
+```
+
+<h4>Funkcje muszą być zadeklarowane przed użyciem</h4>
+```c++
+#include <iostream>
+
+using namespace std;
+
+// deklaracja + definicja
+void fun1(){
+	cout << "fun1" << endl;
+}
+
+// deklaracja
+void fun2();
+
+int main() {
+	fun1(); // OK
+	fun2(); // OK
+	fun3(); // ŹLE
+
+	return 0;
+}
+
+void fun2(){
+	cout << "fun2" << endl;
+}
+
+void fun3(){
+	cout << "fun3" << endl;
+}
+
 ```
 
 <h1>Tablice</h1>
