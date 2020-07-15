@@ -114,7 +114,7 @@ x++;
 <td>Precyzja nie mniejsza niż dla <code>double</code>.</td>
 </tr>
 <tr>
-<td>Typ logczny</td>
+<td>Typ logiczny</td>
 <td>bool</td>
 <td>&nbsp;</td>
 </tr>
