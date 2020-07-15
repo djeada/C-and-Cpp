@@ -2,6 +2,7 @@
 Kod źródłowy do programów z yt.
 
 <h1>Proces kompilacji</h1>
+###Example
 1. Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
  - Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. 
  - Generacja kodu makr.
