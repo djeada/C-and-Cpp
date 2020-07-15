@@ -5,9 +5,9 @@ Kod źródłowy do programów z yt.
 <ol>
 <li> Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
 <dl>
-<dd>- Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. </dd> 
+<dd>- Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```c++ #include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. </dd> 
 <dd>- Generacja kodu makr. </dd>
-<dd>- Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości. </dd>
+	<dd>- Zamiana stałych zdefiniwanyh za pomocą <i>#define</i> na ich wartości. </dd>
 </dl>
 </li>
 <li> Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę. </li>
@@ -372,6 +372,7 @@ int main() {
 ```
 
 <h4>Funkcje muszą być zadeklarowane przed użyciem</h4>
+
 ```c++
 #include <iostream>
 
@@ -400,7 +401,6 @@ void fun2(){
 void fun3(){
 	cout << "fun3" << endl;
 }
-
 ```
 
 <h1>Tablice</h1>
