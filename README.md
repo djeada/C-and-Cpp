@@ -526,13 +526,12 @@ int main() {
 	cout << ~x << endl; //11111010
 
 	return 0;
-};
 }
 ```
 
 <h4> Bramka OR </h4>
 
-Zamienia zera na jedynki i na odwrót. Operator ~.
+Jedynka gdy co najmniej jeden z bitów to jedynka, w przeciwnym razie zero. Operator |.
 
 <table style="width:100%">
   <tr>
@@ -561,9 +560,29 @@ Zamienia zera na jedynki i na odwrót. Operator ~.
     <td>1</td>
   </tr>
 </table>
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 7;
+	int b = 5;
+	
+	cout << bitset<8>(a) << endl; //00000111
+	cout << bitset<8>(b) << endl; //00000101
+	cout << bitset<8>(a | b) << endl; //00000111
+	
+	return 0;
+}
+```
 
 <h4> Bramka AND </h4>
 
+Jedynka gdy oba bity to jedynki, w przeciwnym razie zero. Operator &.
+
 <table style="width:100%">
   <tr>
     <th>Wejście 1</th>
@@ -591,9 +610,29 @@ Zamienia zera na jedynki i na odwrót. Operator ~.
     <td>1</td>
   </tr>
 </table>
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 7;
+	int b = 5;
+	
+	cout << bitset<8>(a) << endl; //00000111
+	cout << bitset<8>(b) << endl; //00000101
+	cout << bitset<8>(a & b) << endl; //00000101
+	
+	return 0;
+}
+```
 
 <h4> Bramka XOR </h4>
 
+Jedynka gdy bity różne, w przeciwnym razie zero. Operator ^.
+
 <table style="width:100%">
   <tr>
     <th>Wejście 1</th>
@@ -621,6 +660,24 @@ Zamienia zera na jedynki i na odwrót. Operator ~.
     <td>0</td>
   </tr>
 </table>
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 7;
+	int b = 5;
+	
+	cout << bitset<8>(a) << endl; //00000111
+	cout << bitset<8>(b) << endl; //00000101
+	cout << bitset<8>(a ^ b) << endl; //00000010
+	
+	return 0;
+}
+```
 
 <h4> Przesunięcia bitowe </h4>
 
