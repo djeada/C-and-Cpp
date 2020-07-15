@@ -3,13 +3,13 @@ Kod źródłowy do programów z yt.
 
 <h1>Proces kompilacji</h1>
 ###Example
-1. Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
+i. Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
  - Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. 
  - Generacja kodu makr.
  - Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości.
-1. Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę.
-1. Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę.
-1. Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program.
+i. Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę.
+i. Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę.
+i. Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program.
 
 <h1>Zmienne</h1>
 <h4>Stworzenie zmiennej:</h4>
