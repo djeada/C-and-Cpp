@@ -6,9 +6,9 @@ Kod źródłowy do programów z yt.
  - Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. 
  - Generacja kodu makr.
  - Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości.
-2. Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę.
-3. Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę.
-4. Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program.
+1. Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę.
+1. Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę.
+1. Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program.
 
 <h1>Zmienne</h1>
 <h4>Stworzenie zmiennej:</h4>
