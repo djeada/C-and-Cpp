@@ -496,7 +496,7 @@ Mamy możliwość wykonywania operacji na pojedynczych bitach.
 
 <h4> Bramka NOT </h4>
 
-Operator ~ zmienia wszystkie bity argumentu na przeciwne, czyli wykonuje operację negacji bitów.
+Zamienia zera na jedynki i na odwrót. Operator ~.
 
 <table style="width:100%">
   <tr>
@@ -516,20 +516,23 @@ Operator ~ zmienia wszystkie bity argumentu na przeciwne, czyli wykonuje operacj
 
 ```c++
 #include <iostream>
+#include <bitset>
 
 using namespace std;
 
 int main() {
-	int a = 2; // 10b
-	int b = ~a; //01b
-	
-	cout << b << endl;
+	bitset<8> x(5);
+	cout << x << endl; //00000101
+	cout << ~x << endl; //11111010
 
 	return 0;
+};
 }
 ```
 
 <h4> Bramka OR </h4>
+
+Zamienia zera na jedynki i na odwrót. Operator ~.
 
 <table style="width:100%">
   <tr>
