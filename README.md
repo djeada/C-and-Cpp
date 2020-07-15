@@ -328,7 +328,8 @@ int main() {
 ```
 
 <h4>Funkcja zwracająca wartość</h4>
-Konieczne jest użycie słowa kluczowego <em>return</em>.
+Konieczne jest użycie słowa kluczowego <em>return</em>. </br>
+Typ zwracanej wartości powinien zgadzać się z typem umieszczonym przed nazwą funkcji.
 
 ```c++
 #include <iostream>
@@ -351,6 +352,8 @@ int main() {
 
 <h4>Parametry z domyślną wartością</h4>
 
+Domyślna wartość to taka, która zostanie użyta jeśli przy wywołaniu funkcji nie otrzymamy danego parametru.
+
 ```c++
 #include <iostream>
 
@@ -372,6 +375,9 @@ int main() {
 ```
 
 <h4>Funkcje muszą być zadeklarowane przed użyciem</h4>
+
+Jeśli będziemy chcieli użyć funkcji, której nie zadeklarowaliśmy otrzymamy błąd.
+Możemy natomiast użyć funkcji, która nie została jeszcze zdefiniowana.
 
 ```c++
 #include <iostream>
@@ -404,8 +410,8 @@ void fun3(){
 ```
 
 <h1>Tablice</h1>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
+
 
 <h1>Napisy</h1>
 
@@ -456,3 +462,30 @@ void fun3(){
 </tbody>
 </table>
 
+<h1>Preprocessor</h1>
+Pan Preprocesor przetwarza kod źródłowy.
+
+Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
+Dyrektywy mogą być umieszczane są w dowolnym miesjscu programu, ale przyjęło się że najczęściej gromadzi się je u góry pliku źródłowego.
+
+Najczęściej spotykaną dyrektywą będzie załączenie biblioteki.
+
+```c++
+#include <something>
+```
+
+Za pomocą dyrektyw możemy definiować stałe.
+
+```c++
+#define TRUE 1
+```
+
+Możemy również włączyć/wyłączyć część kodu w zależności od danego warunku. Działa to tak samo jak zwykłe instrukcje warunkowe z tym, że podane warunki ustalane są przed uruchomieniem programu.
+
+```c++
+#if 1 == 1
+// kod
+#else
+// inny kod
+#endif
+```
