@@ -411,9 +411,17 @@ void fun3(){
 
 <h1>Tablice</h1>
 
+Jeśli zmienna to pudełko, to tablica to półka z pudełkami. Wszystkie pudełka przechowują dane tego samego typu.
 
+Półka z 3 pudełkami typu int.
+
+int tab[3];
+int arrayOfInts[3] = {10, 20, 30};
+int arrayOfInts[] = {10, 20, 30}
 
 <h1>Napisy</h1>
+
+Napis (string) to tablica znaków.
 
 <p>&nbsp;Bibliteka <em><p>&nbsp;&lt;string&gt;</p></em>zawiera definicje:</p>
 
@@ -681,8 +689,27 @@ int main() {
 
 <h4> Przesunięcia bitowe </h4>
 
-a << b
-Operacja polega na przesunięciu a o b bitów w lewo. Przy czym bity pojawiające się z prawej strony (uzupełniające przesunięcie) są ustawiane na 0. Operacja ta jest równoważna mnożeniu przez 2. Przesunięcie o 1 bit to przemnożenie a przez 2, przesunięcie o 2 bity to dwukrotne pomnożenie a przez 2, itd.
+Bity w lewo przesuwamy za pomocą operatora <<. </br>
+Bity w prawo przesuwamy za pomocą operatora >>. </br>
+Przesunięcie w lewo o 1 bit równoważne jest podzieleniu przez 2. </br>
+Przesuniecie w prawo o 1 bit równoważne jest przemnożeniu przez 2. </br>
 
-a >> b
-Operacja polega na przesunięciu a o b bitów w prawo. Operacja ta jest równoważna dzieleniu całkowitemu przez 2. Przesunięcie o 1 bit to podzielenie a przez 2, przesunięcie o 2 bity to dwukrotne podzielenie a przez 2, itd.
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 14;
+	int b = 2;
+	
+	cout << bitset<8>(a) << endl; //00001110
+	cout << bitset<8>(b) << endl; //00000010
+	cout << bitset<8>(a << b) << endl; //00111000
+	cout << bitset<8>(a >> b) << endl; //00000011
+	
+	return 0;
+}
+```
+
