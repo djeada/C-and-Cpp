@@ -462,7 +462,7 @@ void fun3(){
 </tbody>
 </table>
 
-<h1>Preprocessor</h1>
+<h1>Preprocesor</h1>
 Pan Preprocesor przetwarza kod źródłowy.
 
 Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
@@ -489,3 +489,43 @@ Możemy również włączyć/wyłączyć część kodu w zależności od danego 
 // inny kod
 #endif
 ```
+
+<h1>Operacje bitowe</h1>
+
+<h4> Bramka OR </h4>
+
+<table style="width:100%">
+  <tr>
+    <th>Wejście 1</th>
+    <th>Wejście 2</th>
+    <th>Wyjście</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+
+<h4> Bramka AND </h4>
+
+<h4> Bramka XOR </h4>
+
+<h4> Przesunięcia bitowe </h4>
+
