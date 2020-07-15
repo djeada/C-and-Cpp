@@ -4,9 +4,11 @@ Kod źródłowy do programów z yt.
 <h1>Proces kompilacji</h1>
 <ol>
 <li> Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
- - Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. 
- - Generacja kodu makr.
- - Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości.
+<dl>
+<dd>- Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```#include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. </dd> 
+<dd>- Generacja kodu makr. </dd>
+<dd>- Zamiana stałych zdefiniwanyh za pomocą ```#define``` na ich wartości. </dd>
+</dl>
 </li>
 <li> Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę. </li>
 <li> Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę. </li>
