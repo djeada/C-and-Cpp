@@ -492,6 +492,43 @@ Możemy również włączyć/wyłączyć część kodu w zależności od danego 
 
 <h1>Operacje bitowe</h1>
 
+Mamy możliwość wykonywania operacji na pojedynczych bitach.
+
+<h4> Bramka NOT </h4>
+
+Operator ~ zmienia wszystkie bity argumentu na przeciwne, czyli wykonuje operację negacji bitów.
+
+<table style="width:100%">
+  <tr>
+    <th>Wejście</th>
+    <th>Wyjście</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+</tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int a = 2; // 10b
+	int b = ~a; //01b
+	
+	cout << b << endl;
+
+	return 0;
+}
+```
+
 <h4> Bramka OR </h4>
 
 <table style="width:100%">
@@ -522,10 +559,70 @@ Możemy również włączyć/wyłączyć część kodu w zależności od danego 
   </tr>
 </table>
 
-
 <h4> Bramka AND </h4>
+
+<table style="width:100%">
+  <tr>
+    <th>Wejście 1</th>
+    <th>Wejście 2</th>
+    <th>Wyjście</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
 
 <h4> Bramka XOR </h4>
 
+<table style="width:100%">
+  <tr>
+    <th>Wejście 1</th>
+    <th>Wejście 2</th>
+    <th>Wyjście</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
 <h4> Przesunięcia bitowe </h4>
 
+a << b
+Operacja polega na przesunięciu a o b bitów w lewo. Przy czym bity pojawiające się z prawej strony (uzupełniające przesunięcie) są ustawiane na 0. Operacja ta jest równoważna mnożeniu przez 2. Przesunięcie o 1 bit to przemnożenie a przez 2, przesunięcie o 2 bity to dwukrotne pomnożenie a przez 2, itd.
+
+a >> b
+Operacja polega na przesunięciu a o b bitów w prawo. Operacja ta jest równoważna dzieleniu całkowitemu przez 2. Przesunięcie o 1 bit to podzielenie a przez 2, przesunięcie o 2 bity to dwukrotne podzielenie a przez 2, itd.
