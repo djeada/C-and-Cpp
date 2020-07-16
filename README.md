@@ -418,11 +418,20 @@ void fun3(){
 
 Jeśli zmienna to pudełko, to tablica to półka z pudełkami. Wszystkie pudełka przechowują dane tego samego typu.
 
-Półka z 3 pudełkami typu int.
+Półka z 3 pudełkami typu int. Miejsce w pamięci zostało zarezerwowane, ale pudełka są niezaincjalizowane. Co siedzi w środku? Śmieci.
 
+```c++
 int tab[3];
-int arrayOfInts[3] = {10, 20, 30};
-int arrayOfInts[] = {10, 20, 30}
+```
+Półka z 3 pudełkami typu int. Tablica zadeklarowana i zainicjalizowana. </br>
+Obie wersje dopuszczalne.
+
+```c++
+int arrayOfInts[3] = {7, 8, 11};
+```
+```c++
+int arrayOfInts[] = {7, 8, 11};
+```
 
 <h1>Napisy</h1>
 
@@ -475,34 +484,6 @@ Napis (string) to tablica znaków.
 </tbody>
 </table>
 
-<h1>Preprocesor</h1>
-Pan Preprocesor przetwarza kod źródłowy.
-
-Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
-Dyrektywy mogą być umieszczane są w dowolnym miesjscu programu, ale przyjęło się że najczęściej gromadzi się je u góry pliku źródłowego.
-
-Najczęściej spotykaną dyrektywą będzie załączenie biblioteki.
-
-```c++
-#include <something>
-```
-
-Za pomocą dyrektyw możemy definiować stałe.
-
-```c++
-#define TRUE 1
-```
-
-Możemy również włączyć/wyłączyć część kodu w zależności od danego warunku. Działa to tak samo jak zwykłe instrukcje warunkowe z tym, że podane warunki ustalane są przed uruchomieniem programu.
-
-```c++
-#if 1 == 1
-// kod
-#else
-// inny kod
-#endif
-```
-
 <h1>Pole bitowe</h1>
 
 Możemy wskazać ile dokładnie bitów chcemy zarezerwować dla danego pola struktury.
@@ -533,6 +514,34 @@ int main() {
 	
 	return 0;
 }
+```
+
+<h1>Preprocesor</h1>
+Pan Preprocesor przetwarza kod źródłowy.
+
+Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
+Dyrektywy mogą być umieszczane są w dowolnym miesjscu programu, ale przyjęło się że najczęściej gromadzi się je u góry pliku źródłowego.
+
+Najczęściej spotykaną dyrektywą będzie załączenie biblioteki.
+
+```c++
+#include <something>
+```
+
+Za pomocą dyrektyw możemy definiować stałe.
+
+```c++
+#define TRUE 1
+```
+
+Możemy również włączyć/wyłączyć część kodu w zależności od danego warunku. Działa to tak samo jak zwykłe instrukcje warunkowe z tym, że podane warunki ustalane są przed uruchomieniem programu.
+
+```c++
+#if 1 == 1
+// kod
+#else
+// inny kod
+#endif
 ```
 
 <h1>Operacje bitowe</h1>
