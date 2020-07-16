@@ -274,15 +274,152 @@ int main(){
 
 <h4>If</h4>
 
+Instrukcja warunkowa <i> if </i> pozwala na wykonanie części kodu tylko, gdy spełniony jest dany warunek.
+
 ```c++
 if (warunek)
 	kod jaki ma zostac wykonany gdy warunek jest spełniony
 ```
 
+lub
+
+```c++
+if (warunek)
+	blok kodu jaki ma zostac wykonany gdy warunek jest spełniony
+
+else
+	blok kodu jaki ma zostac wykonany gdy warunek nie jest spełniony
+```
+
+Kod jaki umieścimy po warunku powinien być zamknięty między nawiasy klamrowe, bądź składać się jedynie z pojedynczej linii.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int n;
+	cin >> n;
+	if (n % 3 == 0)
+		cout << "Liczba " << n << " jest podzielna przez 3 " << endl;
+	else {
+		n++;
+		cout << "Wczytana liczba powiększona o 1 to: " << n << endl;
+	}
+
+	return 0;
+}
+```
+
+<h4> Wielokrotne warunki </h4>
+Możemy sprawdzić wiele warunków jeden po drugim i uzleżnić od ich spełnienia różne bloki kodu.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int n;
+	cout << "Podaj numer dnia tygodnia: " << endl;
+	cin >> n;
+	
+	if (n == 0)
+		cout << "Poniedziałek." << endl;
+		
+	else if (n == 1)
+		cout << "Wtorek." << endl;
+
+	else if (n == 2)
+		cout << "Środa. " << endl;
+		
+	else if (n == 3)
+		cout << "Czwartek." << endl;
+		
+	else if (n == 4)
+		cout << "Piątek." << endl;
+		
+	else if (n == 5)
+		cout << "Sobota." << endl;
+		
+	else if (n == 6)
+		cout << "Niedziela." << endl;
+	else
+		cout << "Error! " << endl;
+
+	return 0;
+}
+```
+
+
 <h4>Switch</h4>
 
+<i>Switch</i> daje nam również możliwość sprawdzenia wielokrotnych warunków. </br>
+We współczesnych kompilatorach będzie zazwyczaj szybszy niż <i>else if</i>. </br>
+Jest również uważany za bardziej elegancki.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int n;
+	cout << "Podaj numer dnia tygodnia: " << endl;
+	cin >> n;
+	
+	switch (n) {
+		case 0:
+			cout << "Poniedziałek." << endl;
+			break;
+	
+		case  1:
+			cout << "Wtorek." << endl;
+			break;
+
+		case 2:
+			cout << "Środa. " << endl;
+			break;
+		
+		case 3:
+			cout << "Czwartek." << endl;
+			break;
+
+		case 4:
+			cout << "Piątek." << endl;
+			break;
+
+		case 5:
+			cout << "Sobota." << endl;
+			break;
+
+		case 6:
+			cout << "Niedziela." << endl;
+			break;
+
+		default:
+			cout << "Error! " << endl;
+	}
+		
+	return 0;
+}
+```
 
 <h1>Pętle</h1>
+The for statement repeats the execution of a part of a program.
+for(initialisation; condition; increment)
+<statement to repeat>
+
+<h4> Pętla for </h4>
+
+<h4> Pętla while </h4>
+
+<h4> Pętla do while </h4>
+
+<h4>Continue </h4>
+
+<h4>Break </h4>
 
 <h1>Liczby losowe</h1>
 
@@ -610,7 +747,7 @@ int main() {
 
 Napis (string) to tablica znaków.
 
-<p>&nbsp;Bibliteka <em><p>&nbsp;&lt;string&gt;</p></em>zawiera definicje:</p>
+<p>&nbsp;Biblioteka <i> <string> </i> zawiera definicje:</p>
 
 <table style="height: 263px; width: 546px;">
 <tbody>
