@@ -1,6 +1,13 @@
 # C-and-Cpp
 Kod źródłowy do programów z yt.
 
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
+
 <h1>Proces kompilacji</h1>
 <ol>
 <li> Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
@@ -206,6 +213,10 @@ int main(){
     return 0;
 }
 ```
+
+<h1>Instrukcje sterujące</h1>
+
+<h1>Pętle</h1>
 
 <h1>Liczby losowe</h1>
 
@@ -416,7 +427,7 @@ void fun3(){
 
 <h1>Tablice</h1>
 
-Jeśli zmienna to pudełko, to tablica to półka z pudełkami. Wszystkie pudełka przechowują dane tego samego typu.
+Jeśli zmienna to pudełko, to tablica to półka z pudełkami. Wszystkie pudełka na jednej półce przechowują dane tego samego typu.
 
 Półka z 3 pudełkami typu int. Miejsce w pamięci zostało zarezerwowane, ale pudełka są niezaincjalizowane. Co siedzi w środku? Śmieci.
 
@@ -980,3 +991,5 @@ int main() {
 	return 0;
 }
 ```
+
+<h1>Iteratory<h1>
