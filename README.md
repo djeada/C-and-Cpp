@@ -503,6 +503,38 @@ Możemy również włączyć/wyłączyć część kodu w zależności od danego 
 #endif
 ```
 
+<h1>Pole bitowe</h1>
+
+Możemy wskazać ile dokładnie bitów chcemy zarezerwować dla danego pola struktury.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+struct Data {
+	unsigned int Rok : 13; // 2^13 = 8192
+	unsigned int Miesiac : 4; // 2^4 = 16
+	unsigned int Dzien : 5; // 2^5 = 32
+};
+
+void wypiszDate(Data d) {
+	cout << "Mamy dziś: " << endl;
+	cout << d.Dzien << "-" << d.Miesiac << "-" << d.Rok << endl;
+}
+
+int main() {
+	Data d;
+	d.Rok = 2020;
+	d.Miesiac = 7;
+	d.Dzien = 18;
+	
+	wypiszDate(d);
+	
+	return 0;
+}
+```
+
 <h1>Operacje bitowe</h1>
 
 Mamy możliwość wykonywania operacji na pojedynczych bitach.
@@ -788,7 +820,41 @@ int main() {
 
 <h4>Ustaw n-ty bit</h4>
 
+Wstaw jedynkę na n-te miejsce od końca.
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 8; //00001000
+	int n = 2; //00000010
+
+	cout << bitset<8>(a |= 1 << n) << endl; //00001100
+	
+	return 0;
+}
+```
+
 <h4>Wyczyść n-ty bit</h4>
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 8; //00001000
+	int n = 3; //00000011
+
+	cout << bitset<8>(a &= ~(1 << n)) << endl; //00000000
+	
+	return 0;
+}
+```
 
 <h4>Sprawdź parzystość liczby</h4>
 
