@@ -5,14 +5,19 @@ Kod źródłowy do programów z yt.
 <ol>
 <li> Najpierw na scenę wkracza Pan Preprocesor. Zadań tego Pana jest wiele, wśród nich wymienić można:
 <dl>
-<dd>- Kopiowanie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy ```c++ #include "plik.h"``` to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. </dd> 
+<dd>- Włączenie zawartości załączonych plików nagłówkowych do kodu źródłowego. Na przykład jeśli w jednym z kompilowanych plików umieśiliśmy <i>#include "plik.h"</i> to treść tego pliku zostanie przekopiowana do naszego kodu źródłowego. </dd> 
 <dd>- Generacja kodu makr. </dd>
-	<dd>- Zamiana stałych zdefiniwanyh za pomocą <i>#define</i> na ich wartości. </dd>
+<dd>- Zamiana stałych zdefiniwanyh za pomocą <i>#define</i> na ich wartości. </dd>
 </dl>
 </li>
-<li> Kod źródłowy przygotowany przez Pana Preprocesora jest następnie tłumaczony na assembler zrozumiały przez daną maszynę. </li>
-<li> Kod assemblera jest następnie tłumaczony na kod obiektowy zrozumiały przez daną maszynę. </li>
-<li> Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program. </li>
+<li> Kod źródłowy przygotowany przez Pana Preprocesora jest następnie poddany analizie składni, w której skład wchodzą:
+	<dl>
+		<dd> - Analiza leksykalna (np. odrzucenie zakomentowanych fragmentów kodu). </dd>
+		<dd> - Analiza składni (np. czy nie próbujemy skorzystać ze zmiennej zanim została stworzona). </dd>
+		<dd> - Analiza semantyczna (np. weryfikacja typów i poprawność instrukcji). <.dd>
+	</dl>
+<li> Z kodu assemblera tworzone są pliki obiektowe, z rozszerzeniem </i>.o</i>. </li>
+<li> Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program (na Windowsie będzie mieć rozszerzenie .exe). </li>
 </ol>
 
 <h1>Zmienne</h1>
