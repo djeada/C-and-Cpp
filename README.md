@@ -1,12 +1,14 @@
 # C-and-Cpp
 Kod źródłowy do programów z yt.
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+
+Table of contents
+=================
+
+<!--ts-->
+   * [Proces kompilacji](#Proces-kompilacji)
+   * [Liczby losowe](#Liczby losowe)
+<!--te-->
 
 <h1>Proces kompilacji</h1>
 <ol>
