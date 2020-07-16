@@ -433,6 +433,102 @@ int arrayOfInts[3] = {7, 8, 11};
 int arrayOfInts[] = {7, 8, 11};
 ```
 
+<h4>Wczytywanie i wypisywanie elemntów tablicy </h4>
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+const int n = 10;
+
+int main() {
+
+	int a[n];
+	
+	cout << "Podaj " << n << " elementów: " << endl;
+	
+	for (int i = 0; i < n; i++)
+		cin >> a[i];
+		
+	cout << "Twoja tablica: " << endl;
+	
+	for (int i = 0; i < n; i++)
+		cout << a[i] << endl;
+	
+	return 0;
+}
+```
+
+<h4>Dynamiczna alokacja pamięci </h4>
+
+Aby skorzystać z pamięci sterty, używamy operatora <i>new</i> do alokacji (rezerwacji) miejsc dla elemntów tablicy.
+Gdy tablica nie jest nam już potrzebna zarezerwowaną uprzednio pamięć uwalniamy przy pomocy <i>delete</i>.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	cout << "Podaj liczbę elemntów tablicy: " << endl;
+	
+	int n;
+	cin >> n;
+
+	int *a = new int[n];
+	
+	cout << "Podaj " << n << " elementów: " << endl;
+	
+	for (int i = 0; i < n; i++)
+		cin >> a[i];
+		
+	cout << "Twoja tablica: " << endl;
+	
+	for (int i = 0; i < n; i++)
+		cout << a[i] << endl;
+	
+	delete[] a;
+	
+	return 0;
+}
+```
+
+<h4>Tablica 2D</h4>
+
+Tablice mogą mieć dowolną ilość wymiarów. Najczęściej będzimy spotykać tablice jedno i dwu-wymiarowe.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int const n = 3;
+int const m = 4;
+
+int main() {
+
+	int a[n][m];
+	
+	cout << "Podaj " << n*m << " elementów: " << endl;
+	
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			cin >> a[i][j];
+		
+	cout << "Twoja tablica: " << endl;
+	
+	for (int i = 0; i < n; i++){
+		for (int j = 0; j < m; j++)
+			cout << a[i][j] << " ";
+		cout << endl;
+	}
+		
+	return 0;
+}
+```
+
 <h1>Napisy</h1>
 
 Napis (string) to tablica znaków.
