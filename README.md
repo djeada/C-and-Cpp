@@ -78,6 +78,23 @@ Możemy również włączyć/wyłączyć część kodu w zależności od danego 
 int x;
 double y;
 ```
+
+<h4> Zasady nazewnictwa zmiennych </h4>
+
+Nazwy zmiennych mogą składać się z: </br>
+a) liter </br>
+b) liczb </br>
+c) podkreślnika "_" </br>
+
+Muszą zaczynać się od litery bądź podkreślnika. </br>
+
+Nazwa zmiennej powinna coś znaczyć np. <i>liczbaSamochodow</i>, bądź <i>kolorTla</i>.
+
+Są różne konwencje tworzenie złożonych nazw zmiennych. Dwie najpopularniejsze współcześnie to:
+
+a) oddzielanie słów podkreślnikiem np. masa_czastki_alfa.
+b) oddzielanie słów wielką literą np. masaCzastkiAlfa.
+
 <h4>Inicjalizacja</h4>
 
 ```c++
@@ -178,11 +195,6 @@ x++;
 <td>void</td>
 <td>nic nie przechowuje</td>
 </tr>
-<tr>
-<td>Wskaźnik na nic</td>
-<td>decltype(nullptr)</td>
-<td>&nbsp;</td>
-</tr>
 </tbody>
 </table>
 <p>&nbsp;&nbsp;</p>
@@ -259,6 +271,16 @@ int main(){
 ```
 
 <h1>Instrukcje sterujące</h1>
+
+<h4>If</h4>
+
+```c++
+if (warunek)
+	kod jaki ma zostac wykonany gdy warunek jest spełniony
+```
+
+<h4>Switch</h4>
+
 
 <h1>Pętle</h1>
 
@@ -1008,4 +1030,20 @@ int main() {
 }
 ```
 
-<h1>Iteratory<h1>
+<h1>Iteratory</h1>
+	
+<h1>Programowanie Obiektowe</h1>
+
+Pisanie programów, w których w interakcje ze sobą wchodzą różne <b>obiekty</b>.
+
+<ol>
+	<li> 1. <b>Klasa</b> to szablon, w którym definiujemy <b>pola</b> (jakie dane mogą przechowywać obiekty danej klasy) oraz metody</b> (funkcje coś robiące z tymi polami). </li>
+	<li> 2. Zastosowania obiektów danej klasy dane są przez dostępne metody. </li>
+</ol>
+
+Dlaczego?
+
+<ol>
+	<li> 1. Modularność: każda klasa ma jasno określony cel i wszystko co z nim jest związane zamknięte jest w tej klasie (przynajmniej w teorii).</li> 
+	<li> 3. Łatwość wielokrotnego użytku: możemy tworzyć nieskończenie wiele obiektów danej klasy, ograniczają nas jedynie fizyczne możliwości naszej maszyny.</li> 
+</ol>
