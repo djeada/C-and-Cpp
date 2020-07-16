@@ -7,7 +7,7 @@ Table of contents
 
 <!--ts-->
    * [Proces kompilacji](#Proces-kompilacji)
-   * [Liczby losowe](#Liczby losowe)
+   * [Liczby losowe](#Liczby-losowe)
 <!--te-->
 
 <h1>Proces kompilacji</h1>
