@@ -2,23 +2,25 @@
 Kod źródłowy do programów z yt.
 
 
-Table of contents
+Spis Treści
 =================
 
 <!--ts-->
    * [Proces kompilacji](#Proces-kompilacji)
+   * [Preprocesor](#Preprocesor)
    * [Zmienne](#Zmienne)
    * [Interakcja z konsolą](#Interakcja-z-konsolą)
    * [Instrukcje sterujące](#Instrukcje-sterujące)
    * [Pętle](#Pętle)
    * [Liczby losowe](#Liczby-losowe)
-   * [Wskaźniki](#Wskaźniki)
    * [Funkcje](#Funkcje)
+   * [Wskaźniki](#Wskaźniki)
    * [Tablice](#Tablice)
    * [Napisy](#Napisy)
    * [Pola bitowe](#Pola-bitowe)
-   * [Preprocesor](#Preprocesor)
    * [Operacje bitowe](#Operacje-bitowe)
+   * [Iteratory](#Iteratory)
+
 <!--te-->
 
 <h1>Proces kompilacji</h1>
@@ -39,6 +41,34 @@ Table of contents
 <li> Z kodu assemblera tworzone są pliki obiektowe, z rozszerzeniem </i>.o</i>. </li>
 <li> Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program (na Windowsie będzie mieć rozszerzenie .exe). </li>
 </ol>
+
+<h1>Preprocesor</h1>
+Pan Preprocesor przetwarza kod źródłowy.
+
+Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
+Dyrektywy mogą być umieszczane są w dowolnym miesjscu programu, ale przyjęło się że najczęściej gromadzi się je u góry pliku źródłowego.
+
+Najczęściej spotykaną dyrektywą będzie załączenie biblioteki.
+
+```c++
+#include <something>
+```
+
+Za pomocą dyrektyw możemy definiować stałe.
+
+```c++
+#define TRUE 1
+```
+
+Możemy również włączyć/wyłączyć część kodu w zależności od danego warunku. Działa to tak samo jak zwykłe instrukcje warunkowe z tym, że podane warunki ustalane są przed uruchomieniem programu.
+
+```c++
+#if 1 == 1
+// kod
+#else
+// inny kod
+#endif
+```
 
 <h1>Zmienne</h1>
 <h4>Stworzenie zmiennej:</h4>
@@ -253,66 +283,6 @@ int orzel_lub_reszka(){
 }
 ```
 
-<h1>Wskaźniki</h1>
-
-Wskaźnik przechowuje adres innej zmiennej.
-
-<h4>Deklaracja</h4>
-<p><em>Typ_zmiennej_kt&oacute;rej_adres_przechowuje_wskaźnik * nazwa_wskaźnika;</em></p>
-
-```c++
-int* p1;
-double* p2;
-string* p3;
-```
-<h4>Inicjalizacja</h4>
-
-```c++
-int x = 4;
-double y = 3.5;
-string s = "napis";
-
-p1 = &x;
-p2 = &y;
-p3 = &s;
-```
-<h4>Dereferencja</h4>
-Wyłuskanie wartości na, która znajduje się w zmiennej, na którą wskazuje nasz wskaźnik.
-Używane nie tylko do odczytu, ale również zmiany wartości tej zmiennej.
-
-<p><em>*nazwa wskaźnika</em></p>
-
-```c++
-#include<iostream>
-using namespace std;
-
-int main(){
-	int x = 4;
-	double y = 3.5;
-	string s = "napis";
-	
-	int* p1 = &x;
-	double* p2 = &y;
-	string* p3 = &s;
-  
-  	cout << "Co siedzi w zmiennych x, y, s: " << endl;
-	cout << p1* << endl;
-	cout << p2* << endl;
-	cout << p3* << endl;
-  
-  	*p1 = 7; //zmiana wartosci zmiennej x
-	*p2 = 8.123; //zmiana wartosci zmiennej y
-  	*p3 = "inny"; //zmiana wartosci zmiennej s
-
-	cout << "Co siedzi w zmiennych x, y, s: " << endl;
-	cout << p1* << endl;
-	cout << p2* << endl;
-	cout << p3* << endl;
-  
-  	return 0;
-}
-```
-
 <h1>Funkcje</h1>
 
 <h4>Tworzenie i wywoływanie funkcji</h4>
@@ -436,6 +406,66 @@ void fun2(){
 
 void fun3(){
 	cout << "fun3" << endl;
+}
+```
+
+<h1>Wskaźniki</h1>
+
+Wskaźnik przechowuje adres innej zmiennej.
+
+<h4>Deklaracja</h4>
+<p><em>Typ_zmiennej_kt&oacute;rej_adres_przechowuje_wskaźnik * nazwa_wskaźnika;</em></p>
+
+```c++
+int* p1;
+double* p2;
+string* p3;
+```
+<h4>Inicjalizacja</h4>
+
+```c++
+int x = 4;
+double y = 3.5;
+string s = "napis";
+
+p1 = &x;
+p2 = &y;
+p3 = &s;
+```
+<h4>Dereferencja</h4>
+Wyłuskanie wartości na, która znajduje się w zmiennej, na którą wskazuje nasz wskaźnik.
+Używane nie tylko do odczytu, ale również zmiany wartości tej zmiennej.
+
+<p><em>*nazwa wskaźnika</em></p>
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main(){
+	int x = 4;
+	double y = 3.5;
+	string s = "napis";
+	
+	int* p1 = &x;
+	double* p2 = &y;
+	string* p3 = &s;
+  
+  	cout << "Co siedzi w zmiennych x, y, s: " << endl;
+	cout << p1* << endl;
+	cout << p2* << endl;
+	cout << p3* << endl;
+  
+  	*p1 = 7; //zmiana wartosci zmiennej x
+	*p2 = 8.123; //zmiana wartosci zmiennej y
+  	*p3 = "inny"; //zmiana wartosci zmiennej s
+
+	cout << "Co siedzi w zmiennych x, y, s: " << endl;
+	cout << p1* << endl;
+	cout << p2* << endl;
+	cout << p3* << endl;
+  
+  	return 0;
 }
 ```
 
@@ -635,34 +665,6 @@ int main() {
 	
 	return 0;
 }
-```
-
-<h1>Preprocesor</h1>
-Pan Preprocesor przetwarza kod źródłowy.
-
-Zadania Pana Preprocesora definiowane są za pomocą specjalnych zaklęć zwanych dyrektywami rozpoczynanych od kratki <i>#</i>. 
-Dyrektywy mogą być umieszczane są w dowolnym miesjscu programu, ale przyjęło się że najczęściej gromadzi się je u góry pliku źródłowego.
-
-Najczęściej spotykaną dyrektywą będzie załączenie biblioteki.
-
-```c++
-#include <something>
-```
-
-Za pomocą dyrektyw możemy definiować stałe.
-
-```c++
-#define TRUE 1
-```
-
-Możemy również włączyć/wyłączyć część kodu w zależności od danego warunku. Działa to tak samo jak zwykłe instrukcje warunkowe z tym, że podane warunki ustalane są przed uruchomieniem programu.
-
-```c++
-#if 1 == 1
-// kod
-#else
-// inny kod
-#endif
 ```
 
 <h1>Operacje bitowe</h1>
