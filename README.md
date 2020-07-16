@@ -14,7 +14,7 @@ Kod źródłowy do programów z yt.
 	<dl>
 		<dd> - Analiza leksykalna (np. odrzucenie zakomentowanych fragmentów kodu). </dd>
 		<dd> - Analiza składni (np. czy nie próbujemy skorzystać ze zmiennej zanim została stworzona). </dd>
-		<dd> - Analiza semantyczna (np. weryfikacja typów i poprawność instrukcji). <.dd>
+		<dd> - Analiza semantyczna (np. weryfikacja typów i poprawność instrukcji). </dd>
 	</dl>
 <li> Z kodu assemblera tworzone są pliki obiektowe, z rozszerzeniem </i>.o</i>. </li>
 <li> Przygotowany w ten sposób kod obiektowy jest łączony z kodem obiektowym funkcji z zewnętrznych bibliotek w wykonywalny program (na Windowsie będzie mieć rozszerzenie .exe). </li>
@@ -717,4 +717,95 @@ int main() {
 	return 0;
 }
 ```
+<h4>Ustaw wszystkie bity</h4>
 
+Zamiana wszystkich bitów na jedynki.
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 14;
+	
+	cout << bitset<8>(a) << endl; //00001110
+	
+	a = -1; // zamienia wszystkie bity na 1
+	
+	cout << bitset<8>(a) << endl; //11111111
+	
+	a = 14;
+	
+	//inny sposob
+	cout << bitset<8>(a).set() << endl; //11111111
+	
+	return 0;
+}
+```
+
+<h4>Obróć n-ty bit</h4>
+
+Zamień n-ty (licząc od prawej strony) bit na jego przeciwieństwo, czyli jedynkę na zero i na odwrót.
+
+```c++
+#include <iostream>
+#include <bitset>
+
+using namespace std;
+
+int main() {
+	int a = 14; //00001110
+	int n = 2; //00000010
+
+	a ^= 1 << n;
+	
+	cout << bitset<8>(a) << endl; //00001010
+	
+	return 0;
+}
+```
+
+<h4>Sprawdź n-ty bit</h4>
+
+Sprawdź czy n-ty (licząc od prawej strony) bit to zero, czy jedynka.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int a = 14; //00001110
+	int n = 2; //00000010
+	
+	cout << (a >> n & 1) << endl; //1
+	
+	return 0;
+}
+```
+
+<h4>Ustaw n-ty bit</h4>
+
+<h4>Wyczyść n-ty bit</h4>
+
+<h4>Sprawdź parzystość liczby</h4>
+
+Wystarczy sprawdzić ostatni bit. Nieparzysta liczba będzie zawsze miała na ostatnim miejscu jedynkę, a parzysta zero.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int a = 8; //00001000
+	int b = 7; //00000111
+
+	cout << (a && !(a & (a - 1))) << endl; //1
+	cout << (b && !(b & (b - 1))) << endl; //0
+	
+	return 0;
+}
+```
