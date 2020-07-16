@@ -7,7 +7,18 @@ Table of contents
 
 <!--ts-->
    * [Proces kompilacji](#Proces-kompilacji)
+   * [Zmienne](#Zmienne)
+   * [Interakcja z konsolą](#Interakcja-z-konsolą)
+   * [Instrukcje sterujące](#Instrukcje-sterujące)
+   * [Pętle](#Pętle)
    * [Liczby losowe](#Liczby-losowe)
+   * [Wskaźniki](#Wskaźniki)
+   * [Funkcje](#Funkcje)
+   * [Tablice](#Tablice)
+   * [Napisy](#Napisy)
+   * [Pola bitowe](#Pola-bitowe)
+   * [Preprocesor](#Preprocesor)
+   * [Operacje bitowe](#Operacje-bitowe)
 <!--te-->
 
 <h1>Proces kompilacji</h1>
@@ -51,7 +62,7 @@ x = x + 3;
 x++;
 ```
 
-<h2>Typy zmiennych</h2>
+<h4>Typy zmiennych</h4>
 <table class="boxed">
 <tbody>
 <tr>
@@ -145,7 +156,8 @@ x++;
 </tbody>
 </table>
 <p>&nbsp;&nbsp;</p>
-<h2>Stałe</h2>
+
+<h4>Stałe</h4>
 Zmiana przechowywanej wartości jest zablokowana.
 
 ```c++
@@ -158,7 +170,7 @@ const double doInicjalizacji;
 bool prawda true;
 const bool zawsze_prawda = prawda;
 ```
-<h2>Zakres życia zmiennych</h2>
+<h4>Zakres życia zmiennych</h4>
 
 ```c++
 int liczba = 5;
