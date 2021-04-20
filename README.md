@@ -1184,3 +1184,9 @@ Dlaczego?
 	<li> 1. Modularność: każda klasa ma jasno określony cel i wszystko co z nim jest związane zamknięte jest w tej klasie (przynajmniej w teorii).</li> 
 	<li> 3. Łatwość wielokrotnego użytku: możemy tworzyć nieskończenie wiele obiektów danej klasy, ograniczają nas jedynie fizyczne możliwości naszej maszyny.</li> 
 </ol>
+
+```bash
+gcc -std=c99
+g++ -std=c++98
+find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file -i {} \;
+```
