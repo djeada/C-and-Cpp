@@ -1,5 +1,0 @@
-﻿  hash.cpp
-c:\users\adam\source\repos\hashtable\hashtable\hash.cpp(170): warning C4018: '<': signed/unsigned mismatch
-  main.cpp
-  Generating Code...
-  HashTable.vcxproj -> C:\Users\Adam\source\repos\HashTable\Debug\HashTable.exe
