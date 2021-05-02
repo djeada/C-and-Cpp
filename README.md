@@ -1188,5 +1188,6 @@ Dlaczego?
 ```bash
 gcc -std=c99
 g++ -std=c++98
+sudo apt install clang-format
 find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file -i {} \;
 ```
